@@ -9,6 +9,10 @@
     <WarningLevel>1</WarningLevel>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Views\Home\Class.cs" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
