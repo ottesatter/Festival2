@@ -37,15 +37,13 @@ body {
     background-color:white;
 }
 
-.nav-bar a.active{
-    background-color: white;
-    color: black;
-}
-
-
 .wrapper {
     background:#4E4E50;
     width:60%;
     margin-left:20%;
     display:inline-block;
+}
+
+.img{
+    width:100%;
 }
