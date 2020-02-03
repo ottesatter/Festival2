@@ -23,13 +23,23 @@ body {
     margin:4px 7px 4px 7px;
 }
 
-.nav-bar a:active {
+.asnav-bar a:active {
     color: red;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
     margin: 4px 7px 4px 7px;
+}
+
+.nav-bar a:hover{
+    color:black;
+    background-color:white;
+}
+
+.nav-bar a.active{
+    background-color: white;
+    color: black;
 }
 
 
