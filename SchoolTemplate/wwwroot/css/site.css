@@ -7,7 +7,6 @@ html {
 body {
     background:#6F2232;
     margin-top:0px;
-    background-color:#4E4E50;
 }
 
 .nav-bar {
@@ -38,12 +37,6 @@ body {
     background-color:white;
 }
 
-.nav-bar a.active{
-    background-color: white;
-    color: black;
-}
-
-
 .wrapper {
     background:#4E4E50;
     width:60%;
@@ -51,3 +44,6 @@ body {
     display:inline-block;
 }
 
+.img{
+    width:100%;
+}
