@@ -5,13 +5,14 @@ html {
 }
 
 body {
-    background:#6F2232;
+    background:#5cdb95;
     margin-top:0px;
 }
 
 .nav-bar {
     text-align: center;
     padding: 15px 0px 15px 0px;
+    background: #379683;
 }
 
 .nav-bar a {
@@ -38,10 +39,11 @@ body {
 }
 
 .wrapper {
-    background:#4E4E50;
-    width:60%;
-    margin-left:20%;
-    display:inline-block;
+    background: #4E4E50;
+    width: 60%;
+    margin-left: 20%;
+    display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .img{
