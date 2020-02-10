@@ -13,6 +13,7 @@ namespace SchoolTemplate.Controllers
     // zorg ervoor dat je hier je gebruikersnaam (leerlingnummer) en wachtwoord invult
     string connectionString = "Server=172.16.160.21;Port=3306;Database=110157;Uid=110157;Pwd=crOLeran;";
 
+    [Route("index")]
     public IActionResult Index()
     {
       List<Product> products = new List<Product>();
@@ -65,10 +66,18 @@ namespace SchoolTemplate.Controllers
       return View();
     }
 
-    public IActionResult ShowAll()
+    [Route("contact")]
+    public IActionResult Contact()
     {
         return View();
     }
+
+    [Route("overview")]
+    public IActionResult Overview()
+    {
+        return View();
+    }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
