@@ -5,9 +5,12 @@ html {
 }
 
 body {
-    background:#5cdb95;
-    margin-top:0px;
+    background: white;
+    margin-top: 0px;
+
 }
+
+
 
 .nav-bar {
     text-align: center;
