@@ -1,1 +1,9 @@
-﻿Welkom bij ... Festival. Als u opzoek bent naar een geweldige festival ervaring bent u hier aan het goede adres.
+﻿@using SchoolTemplate.Database;
+@model List<Festival>
+
+@foreach (Festival f in Model)
+{
+    <p>
+        @f.naam
+    </p>
+}

@@ -12,10 +12,17 @@ namespace SchoolTemplate.Controllers
     {
         // zorg ervoor dat je hier je gebruikersnaam (leerlingnummer) en wachtwoord invult
         string connectionString = "Server=172.16.160.21;Port=3306;Database=110157;Uid=110157;Pwd=crOLeran;";
-
-        private List<festivals> GetFestivals()
+        public IActionResult Index()
         {
-            List<festivals> products = new List<festivals>();
+            List<Festival> festivals = new List<Festival>();
+            // uncomment deze regel om producten uit je database toe te voegen
+            festivals = GetFestivals();
+
+            return View(festivals);
+        }
+        private List<Festival> GetFestivals()
+        {
+            List<Festival> festivals = new List<Festival>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -26,12 +33,12 @@ namespace SchoolTemplate.Controllers
                 {
                     while (reader.Read())
                     {
-                        festivals f = new festival
+                        Festival f = new Festival
                         {
-                            Id = Convert.ToInt32(reader["id"]),
-                            Naam = reader["naam"].ToString()
+                            id = Convert.ToInt32(reader["id"]),
+                            naam = reader["naam"].ToString()
                         };
-                        festivals.Add(p);
+                        festivals.Add(f);
                     }
                 }
             }
@@ -39,16 +46,9 @@ namespace SchoolTemplate.Controllers
             return festivals;
         }
         
-    public IActionResult Index()
-    {
-      List<festivals> festival = new List<festivals>();
-      // uncomment deze regel om producten uit je database toe te voegen
-      festivals = GetFestival();
+   
 
-      return View(festival);
-    }
-
-    [Route("informatie")]
+    [Route("informatie/{id}")]
     public IActionResult Informatie()
     {
       return View();
