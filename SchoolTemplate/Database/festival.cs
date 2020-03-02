@@ -8,5 +8,7 @@ namespace SchoolTemplate.Database
     
     public string naam { get; set; }
 
+    public string plaats { get; set; }
+
   }
 }

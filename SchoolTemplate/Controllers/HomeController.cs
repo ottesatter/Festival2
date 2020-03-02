@@ -48,7 +48,7 @@ namespace SchoolTemplate.Controllers
         
    
 
-    [Route("informatie/{id}")]
+    [Route("informatie")]
     public IActionResult Informatie()
     {
       return View();
@@ -65,6 +65,13 @@ namespace SchoolTemplate.Controllers
     {
         return View();
     }
+        
+    [Route("detail/{id}")]
+    public IActionResult Detail()
+    {
+        return View();
+    }
+
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
