@@ -60,7 +60,7 @@ namespace SchoolTemplate.Controllers
         return View();
     }
 
-    [Route("overview")]
+    [Route("Overview")]
     public IActionResult Overview()
     {
         return View();
@@ -81,3 +81,4 @@ namespace SchoolTemplate.Controllers
     }
   }
 }
+
