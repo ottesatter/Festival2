@@ -2,7 +2,7 @@
 
 namespace SchoolTemplate.Database
 {
-  public class Product
+  public class Festival
   {
     public int id { get; set; }
     

@@ -1,1 +1,9 @@
-﻿hoi
+﻿@using SchoolTemplate.Database;
+@model List<Festival>
+
+@foreach (Festival f in Model)
+{
+    <p>
+        @f.naam
+    </p>
+}
