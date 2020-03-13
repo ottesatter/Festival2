@@ -36,7 +36,8 @@ namespace SchoolTemplate.Controllers
                         Festival f = new Festival
                         {
                             id = Convert.ToInt32(reader["id"]),
-                            naam = reader["naam"].ToString()
+                            naam = reader["naam"].ToString(),
+                            plaats = reader["plaats"].ToString()                            
                         };
                         festivals.Add(f);
                     }
@@ -51,7 +52,7 @@ namespace SchoolTemplate.Controllers
     [Route("informatie")]
     public IActionResult Informatie()
     {
-      return View();
+      return View(GetFestivals());
     }
 
     [Route("contact")]
