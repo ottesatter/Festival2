@@ -61,6 +61,14 @@ namespace SchoolTemplate.Controllers
         return View();
     }
 
+    [Route("contact")]
+    [HttpPost]
+    public IActionResult Contact(PersonModel model)
+    {
+      return View(model);
+    }
+
+
     [Route("Overview")]
     public IActionResult Overview()
     {
