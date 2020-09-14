@@ -5,6 +5,7 @@ namespace SchoolTemplate.Models
 {
     public class PersonModel
     {
+        [Required(ErrorMessage = "Voornaam is verplicht")]
         public string Voornaam { get; set; }
 
         [Required(ErrorMessage = "Achternaam is verplicht")]

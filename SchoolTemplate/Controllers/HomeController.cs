@@ -65,7 +65,30 @@ namespace SchoolTemplate.Controllers
     [HttpPost]
     public IActionResult Contact(PersonModel model)
     {
-      return View(model);
+      // geen goed model
+      if(!ModelState.IsValid)
+        return View(model);
+
+            //wel valide
+      SavePerson(model);
+
+
+      return View();
+    }
+
+    private void SavePerson(PersonModel person)
+    {
+      using (MySqlConnection conn = new MySqlConnection(connectionString))
+      {
+        conn.Open();
+        MySqlCommand cmd = new MySqlCommand("Insert INTO klant(voornaam, achternaam, emailadres, geb_datum) VALUES(?voornaam,?achternaam,?email, ?geb_datum)", conn);
+
+        cmd.Parameters.Add("?voornaam", MySqlDbType.VarChar).Value = person.Voornaam;
+        cmd.Parameters.Add("?achternaam", MySqlDbType.VarChar).Value = person.Achternaam;
+        cmd.Parameters.Add("?email", MySqlDbType.VarChar).Value = person.Email;
+        cmd.Parameters.Add("?geb_datum", MySqlDbType.VarChar).Value = person.Geboortedatum;
+        cmd.ExecuteNonQuery();
+      }
     }
 
 

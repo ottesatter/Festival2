@@ -10,7 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Views\Home\Class.cs" />
     <Compile Remove="Views\Home\Detail.cs" />
   </ItemGroup>
 

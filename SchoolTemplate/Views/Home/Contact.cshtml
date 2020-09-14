@@ -9,20 +9,17 @@
     <p>
         Je voornaam is: @Model.Voornaam <br />
         Je achternaam is: @Model.Achternaam <br /> 
+        Je e-mailadres is: @Model.Email <br />
     </p>
 }
 
 <form method="post">
-    <input type="text" name="voornaam" placeholder="Voornaam" /> <br/>
+    <input type="text" name="voornaam" placeholder="Voornaam" /> <br />
+    @Html.ValidationMessageFor(m => m.Voornaam) <br />
     <input type="text" name="achternaam" placeholder="Achternaam" /> <br />
     @Html.ValidationMessageFor(m => m.Achternaam) <br />
-    <input type="text" name="email" placeholder="e-mail" /> <br />
+    <input type="text" name="email" placeholder="E-mail" /> <br />
     @Html.ValidationMessageFor(m => m.Email) <br />
-    <input type="datetime" name="geboortedatum" /> <br />
+    <input type="datetime" name="geboortedatum" placeholder="Geboortedatum" /> <br />
     <input type="submit" value="verstuur" />
 </form>
-
-<p>
-    Je voornaam is: @ViewData["voornaam"] <br />
-    Je achternaam is: @ViewData["achternaam"] <br />
-</p>
