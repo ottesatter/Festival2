@@ -73,7 +73,7 @@ namespace SchoolTemplate.Controllers
       SavePerson(model);
 
 
-      return View();
+      return Redirect("/gelukt");
     }
 
     private void SavePerson(PersonModel person)
@@ -104,7 +104,11 @@ namespace SchoolTemplate.Controllers
         return View();
     }
 
-
+    [Route("gelukt")]
+    public IActionResult Gelukt()
+    {
+        return View();
+    }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
