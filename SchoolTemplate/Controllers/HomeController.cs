@@ -37,7 +37,8 @@ namespace SchoolTemplate.Controllers
                         {
                             id = Convert.ToInt32(reader["id"]),
                             naam = reader["naam"].ToString(),
-                            plaats = reader["plaats"].ToString()                            
+                            plaats = reader["plaats"].ToString(), 
+                            beschrijving = reader["beschrijving"].ToString()
                         };
                         festivals.Add(f);
                     }

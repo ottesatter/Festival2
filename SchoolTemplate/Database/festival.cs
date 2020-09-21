@@ -10,5 +10,7 @@ namespace SchoolTemplate.Database
 
     public string plaats { get; set; }
 
+    public string beschrijving { get; set; }
+
   }
 }
