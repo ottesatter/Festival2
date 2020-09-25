@@ -38,7 +38,9 @@ namespace SchoolTemplate.Controllers
                             id = Convert.ToInt32(reader["id"]),
                             naam = reader["naam"].ToString(),
                             plaats = reader["plaats"].ToString(), 
-                            beschrijving = reader["beschrijving"].ToString()
+                            beschrijving = reader["beschrijving"].ToString(),
+                            start_dt = DateTime.Parse(reader["start_dt"].ToString()),
+                            eind_dt = DateTime.Parse(reader["eind_dt"].ToString()),
                         };
                         festivals.Add(f);
                     }
@@ -53,7 +55,7 @@ namespace SchoolTemplate.Controllers
     [Route("informatie")]
     public IActionResult Informatie()
     {
-      return View(GetFestivals());
+      return View();
     }
 
     [Route("contact")]
@@ -96,7 +98,7 @@ namespace SchoolTemplate.Controllers
     [Route("Overview")]
     public IActionResult Overview()
     {
-        return View();
+        return View(GetFestivals());
     }
         
     [Route("detail/{id}")]

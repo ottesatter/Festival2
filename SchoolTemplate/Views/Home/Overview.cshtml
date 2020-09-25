@@ -1,1 +1,12 @@
-﻿@model PersonModel
+﻿@using SchoolTemplate.Database;
+@model List<Festival>
+
+@foreach (Festival f in Model)
+{
+    <p>
+        Naam: @f.naam <br />
+        Plaats: @f.plaats <br />
+        Beschrijving: @f.beschrijving <br />
+        Start: @f.start_dt.ToString("D") - Eind: @f.eind_dt.ToString("D") <br />
+    </p>
+}
