@@ -17,11 +17,13 @@ body {
 
 .nav-bar {
     text-align: center;
-    padding: 20px 0px 20px 0px;
+    padding: 10px 158px 10px 158px;
     background: #379683;
     position: fixed;
     left: 0;
-    right:0;
+    right: 0;
+    top: 0;
+    display:flex;
 }
 
 
@@ -30,8 +32,10 @@ body {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
-    margin:4px 7px 4px 7px;
+    font-size: 20px;
+    margin: 4px 7px 4px 7px;
+    font-family: 'Optima', sans-serif;   
+    flex-grow:1;
 }
 
 .asnav-bar a:active {
@@ -41,6 +45,7 @@ body {
     text-decoration: none;
     font-size: 17px;
     margin: 4px 7px 4px 7px;
+    font-family: 'Optima', sans-serif;
 }
 
 .nav-bar a:hover{
@@ -49,14 +54,24 @@ body {
 }
 
 .wrapper {
-    background: #379683;
+    
     width: 60%;
     margin-left: 20%;
     display: inline-block;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-top: 80px;
+
 }
 
-.img{
+img{
     width:100%;
+    margin-top: 60px;
+}
+
+.doosje {
+    background-color: #339966;
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 30px;
     margin-top: 20px;
+    border-radius: 20px;
 }

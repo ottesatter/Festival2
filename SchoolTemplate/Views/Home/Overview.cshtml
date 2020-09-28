@@ -1,12 +1,18 @@
 ﻿@using SchoolTemplate.Database;
 @model List<Festival>
 
+
 @foreach (Festival f in Model)
+
+
 {
+    <div class="doosje">
     <p>
-        Naam: @f.naam <br />
+        @f.naam <br />
         Plaats: @f.plaats <br />
         Beschrijving: @f.beschrijving <br />
         Start: @f.start_dt.ToString("D") - Eind: @f.eind_dt.ToString("D") <br />
+        Foto: @f.plaatje <br />
     </p>
+    </div>
 }

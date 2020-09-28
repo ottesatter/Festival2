@@ -41,6 +41,7 @@ namespace SchoolTemplate.Controllers
                             beschrijving = reader["beschrijving"].ToString(),
                             start_dt = DateTime.Parse(reader["start_dt"].ToString()),
                             eind_dt = DateTime.Parse(reader["eind_dt"].ToString()),
+                            plaatje = reader["plaatje"].ToString(),
                         };
                         festivals.Add(f);
                     }
