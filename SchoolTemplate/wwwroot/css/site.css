@@ -74,4 +74,12 @@ img{
     margin-bottom: 30px;
     margin-top: 20px;
     border-radius: 20px;
+    font-family: 'Didot', serif;
+    color: white;
 }
+
+.contactpag input[type=text], input[type=datetime], select, textarea{
+    width: 60%;
+    padding: 10px 20px;
+}
+

@@ -12,14 +12,14 @@
         Je e-mailadres is: @Model.Email <br />
     </p>
 }
-
-<form method="post">
-    <input type="text" name="voornaam" placeholder="Voornaam" /> <br />
-    @Html.ValidationMessageFor(m => m.Voornaam) <br />
-    <input type="text" name="achternaam" placeholder="Achternaam" /> <br />
-    @Html.ValidationMessageFor(m => m.Achternaam) <br />
-    <input type="text" name="email" placeholder="E-mail" /> <br />
-    @Html.ValidationMessageFor(m => m.Email) <br />
-    <input type="datetime" name="geboortedatum" placeholder="Geboortedatum" /> <br />
-    <input type="submit" value="verstuur" />
-</form>
+<div class="contactpag">
+    <form method="post">
+        <input type="text" name="voornaam" placeholder="Voornaam" /> <br />
+        @Html.ValidationMessageFor(m => m.Voornaam) <br />
+        <input type="text" name="achternaam" placeholder="Achternaam" /> <br />
+        @Html.ValidationMessageFor(m => m.Achternaam) <br />
+        <input type="text" name="email" placeholder="E-mail" /> <br />
+        @Html.ValidationMessageFor(m => m.Email) <br />
+        <input type="datetime" name="geboortedatum" placeholder="Geboortedatum" /> <br />
+        <input type="submit" value="verstuur" />
+    </form>

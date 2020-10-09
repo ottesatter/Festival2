@@ -7,12 +7,14 @@
 
 {
     <div class="doosje">
-    <p>
-        @f.naam <br />
-        Plaats: @f.plaats <br />
-        Beschrijving: @f.beschrijving <br />
-        Start: @f.start_dt.ToString("D") - Eind: @f.eind_dt.ToString("D") <br />
-        Foto: @f.plaatje <br />
-    </p>
+        <p>
+            @f.naam <br />
+            Plaats: @f.plaats <br />
+            Beschrijving: @f.beschrijving <br />
+            Start: @f.start_dt.ToString("D") - Eind: @f.eind_dt.ToString("D") <br />
+
+        </p>
+        <img src ="@f.plaatje"/> 
+        <br />
     </div>
 }
