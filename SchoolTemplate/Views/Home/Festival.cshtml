@@ -1,0 +1,15 @@
+﻿@model SchoolTemplate.Database.Festival
+@{ 
+
+    ViewData["Title"] = "Festival";
+}
+<h1>@Model.naam</h1>
+
+<div class="linkje"
+<p>
+    Plaats: @Model.plaats</br>
+    Beschrijving: @Model.beschrijving</br>
+    Data: @Model.start_dt.ToString("D") - Eind: @Model.eind_dt.ToString("D")</br>
+    Prijs: @Model.prijs
+    <img src='@Model.plaatje' </br>
+</p>

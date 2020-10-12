@@ -42,6 +42,7 @@ namespace SchoolTemplate.Controllers
                             start_dt = DateTime.Parse(reader["start_dt"].ToString()),
                             eind_dt = DateTime.Parse(reader["eind_dt"].ToString()),
                             plaatje = reader["plaatje"].ToString(),
+                            prijs = reader["prijs"].ToString(),
                         };
                         festivals.Add(f);
                     }
@@ -102,13 +103,46 @@ namespace SchoolTemplate.Controllers
         return View(GetFestivals());
     }
         
-    [Route("detail/{id}")]
-    public IActionResult Detail()
+    [Route("festival/{id}")]
+    public IActionResult Festival(string id)
     {
-        return View();
+      var model = GetFestivals(id);
+
+        return View(model);
     }
 
-    [Route("gelukt")]
+        private Festival GetFestivals(string id)
+        {
+            List<Festival> festivals = new List<Festival>();
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand($"select * from festival where id = {id}", conn);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Festival p = new Festival
+                        {
+                            id = Convert.ToInt32(reader["id"]),
+                            naam = reader["naam"].ToString(),
+                            plaats = reader["plaats"].ToString(),
+                            beschrijving = reader["beschrijving"].ToString(),
+                            start_dt = DateTime.Parse(reader["start_dt"].ToString()),
+                            eind_dt = DateTime.Parse(reader["eind_dt"].ToString()),
+                            plaatje = reader["plaatje"].ToString(),
+                            prijs = reader["prijs"].ToString(),
+                        };
+                        festivals.Add(p);
+                    }
+                }
+            }
+
+            return festivals[0];
+        }
+        [Route("gelukt")]
     public IActionResult Gelukt()
     {
         return View();
