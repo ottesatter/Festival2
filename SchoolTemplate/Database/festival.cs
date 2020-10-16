@@ -19,6 +19,8 @@ namespace SchoolTemplate.Database
         public DateTime eind_dt { get; set; }
 
         public string prijs { get; set; }
+
+        public string beschikbaarheid { get; set; }
         public global::System.Object plaatje { get; set; }
     }
 }

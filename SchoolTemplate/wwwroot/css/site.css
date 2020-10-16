@@ -73,8 +73,8 @@ img{
     margin-bottom: 30px;
     margin-top: 20px;
     border-radius: 20px;
-    font-family: 'Didot', sans-serif;
     color: white;
+    font-family: 'Didot', sans-serif;
 }
 
 .contactpag input[type=text], input[type=datetime], select, textarea{
@@ -85,7 +85,7 @@ img{
 foto {
     width: 40%;
     margin-bottom: 30%;
-    margin-top: 30%
+    margin-top: 20px
 }
 
 .plattegrond {
@@ -108,3 +108,15 @@ foto {
     color: white;
     padding: 10px 20px;
 }
+
+.titel {
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-family: 'Didot', sans-serif;
+    color: black;
+    padding: 30px 20px ;
+    text-align: center;
+
+}
+
