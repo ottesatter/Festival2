@@ -1,18 +1,36 @@
-﻿@model SchoolTemplate.Database.Festival
+﻿@using SchoolTemplate.Database
+@model Festival
 @{ 
 
     ViewData["Title"] = "Festival";
+    List<Ticket> tickets = ViewData["tickets"] as List<Ticket>;
 }
 
 
 <h1>@Model.naam</h1>
 
-    <div class="linkje"
-    <p>
-    Plaats: @Model.plaats</br>
-    Beschrijving: @Model.beschrijving</br>
-    Start: @Model.start_dt.ToString("D") - Eind: @Model.eind_dt.ToString("D")</br>
-    Prijs: @Model.prijs </br>
-    Beschikbaarheid: @Model.beschikbaarheid
-    <img src='@Model.plaatje' </br>
-    </p>
+<div class="linkje">
+    <h2>Tickets beschikbaar:</h2>
+    @if (tickets != null)
+    {
+        foreach (Ticket t in tickets)
+        {
+            <p>@t.begin_dt.ToString("D") - @t.eind_dt.ToString("D"):</p>
+            <p>@t.beschikbaarheid</p>
+        }
+    }
+    else
+    {
+        <p>Geen tickets</p>
+    }
+
+        <p>
+            Plaats: @Model.plaats</br>
+            Beschrijving: @Model.beschrijving</br>
+            Start: @Model.start_dt.ToString("D") - Eind: @Model.eind_dt.ToString("D")</br>
+            Prijs: @Model.prijs </br>
+            <img src="@Model.plaatje" /> </br>
+        </p>
+    </div>
+
+

@@ -126,10 +126,9 @@ foto {
     margin-top: 20px;
     margin-bottom: 0px;
     font-family: 'Didot', sans-serif;
-    color: black;
+    color: white;
     padding: 30px 20px ;
     text-align: center;
-
 }
 
 .contactt {
@@ -151,3 +150,16 @@ foto {
     padding: 10px 20px;
     font-size: 20px
 }
+
+.detailpaginalink {
+    text-decoration: underline;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.detailpaginalink:hover {
+        color: black;
+        background-color: #339966
+}
+

@@ -2,6 +2,7 @@
 @model List<Festival>
 @{
     ViewData["Title"] = "Home Page";
+    var latestFestival = Model.First();
 }
 
     <div class="titel"
@@ -10,19 +11,20 @@
      </p>
 
 
+
+
 <img class="img" src="/Img/festival.jpeg">
 
-<div class="festivalnu":
-    <h1>
+<div class="festivalnu">
+    <h1>@latestFestival.naam</h1>
+    Plaats: @latestFestival.plaats</br>
+    Beschrijving: @latestFestival.beschrijving</br>
+    Prijs: @latestFestival.prijs </br>
+    Data: @latestFestival.start_dt.ToString("D") - @latestFestival.eind_dt.ToString("D") </br> </br>
+    <img src="@latestFestival.plaatje" /> </br>
 
-        @using SchoolTemplate.Database;
-        @model List<Festival>
-        @foreach (Festival f in Model);
 
-        Aankomend festival: Festival Kip
-        naam: @f.plaats
-
-    </h1>
+</div>
 
 
 
