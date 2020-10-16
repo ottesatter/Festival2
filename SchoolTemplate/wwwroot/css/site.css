@@ -63,7 +63,7 @@ body {
 
 img{
     width:100%;
-    margin-top: 60px;
+    margin-top: 0px;
 }
 
 .doosje {
@@ -77,9 +77,21 @@ img{
     font-family: 'Didot', sans-serif;
 }
 
-.contactpag input[type=text], input[type=datetime], select, textarea{
+.contactpag input[type=text], input[type=datetime], select, textarea {
     width: 60%;
     padding: 10px 20px;
+    text-align: center;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    font-family: 'Didot', sans-serif;
+}
+
+.contactpag input[type=submit], select, textarea {
+    width: 60%;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Didot', sans-serif;
 }
 
 foto {
@@ -120,3 +132,22 @@ foto {
 
 }
 
+.contactt {
+    text-align: center;
+}
+
+.contactpag {
+    text-align: center;
+    font-family: 'Didot', sans-serif;
+}
+
+.festivalnu {
+    background-color: #339966;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-family: 'Didot', sans-serif;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px
+}
